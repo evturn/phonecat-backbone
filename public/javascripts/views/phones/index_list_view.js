@@ -1,4 +1,4 @@
-PhoneIndexListView = Backbone.View.extend({
+PhonesIndexListView = Backbone.View.extend({
 	initialize: function() {
 		this.render();
 	},
@@ -10,6 +10,6 @@ PhoneIndexListView = Backbone.View.extend({
 		this.$el.append(new PhonesIndexListPhoneView({
 			tagName: 'li',
 			model: phone
-		}))
+		}).el)
 	},
 });
