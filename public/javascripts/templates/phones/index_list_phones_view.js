@@ -1,0 +1,3 @@
+PhonesIndexListPhoneView = Backbone.View.extend({
+	
+});
