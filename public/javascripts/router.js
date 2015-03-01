@@ -1,5 +1,8 @@
-Router = Backbone.Router.extend({
-    
-    routes: {
-    }
+Router = Backbone.Router.extend({  
+  routes: {
+  	'' : 'phonesIndex'
+  },
+  phonesIndex: function() {
+  	new PhonesIndexView({el: 'section#main'});
+  },
 });
