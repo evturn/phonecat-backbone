@@ -1,4 +1,3 @@
-backbone-phonecat
-=================
+#Phonecat
 
-AngularJS tutorial application "PhoneCat" coded in Backbone.js
+## Official AngularJS tutorial done entirely with Backbone.js
