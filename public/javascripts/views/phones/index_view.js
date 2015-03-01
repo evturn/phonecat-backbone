@@ -1,5 +1,6 @@
 PhonesIndexView = Backbone.View.extend({
 	initialize: function() {
+		this.filer = new Filter();
 		this.collection = new PhonesCollection([
 			{'name': 'Nexus S',
 				'snippet': 'Fast just got fast as shit.'},
@@ -11,12 +12,19 @@ PhonesIndexView = Backbone.View.extend({
 
 		this.render();
 
+    new PhonesFilterView({
+      el: this.$('.filter'),
+      model: this.filter,
+      collection: this.collection
+    });
+
     new PhonesIndexListView({
       el: this.$('ul.phones'),
+      model: this.filter,
       collection: this.collection
     });
 	},
 	render: function () {
     this.$el.html(JST['phones/index']());
-	}.
+	},
 });

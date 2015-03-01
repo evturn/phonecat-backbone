@@ -1,5 +1,6 @@
 PhonesIndexListPhoneView = Backbone.View.extend({
   initialize: function () {
+    this.listenTo(this.model, 'remove', this.remove);
     this.render();
   },
   render: function () {
