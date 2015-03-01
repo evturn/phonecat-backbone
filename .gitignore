@@ -1,0 +1,5 @@
+node_modules
+*~
+phones
+public/img
+.DS_Store
