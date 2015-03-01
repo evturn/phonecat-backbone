@@ -1,15 +1,9 @@
 PhonesIndexListView = Backbone.View.extend({
 	initialize: function() {
+		this.listenTo(this.model, 'remove', this.remove);
 		this.render();
 	},
 	render: function() {
-		this.$el.html('');
-		this.collection.each(this.renderPhone, this);
-	},
-	renderPhone: function(phone) {
-		this.$el.append(new PhonesIndexListPhoneView({
-			tagName: 'li',
-			model: phone
-		}).el)
+		this.$el.html(JST['phones/index_list_phone'](this.model));
 	},
 });
