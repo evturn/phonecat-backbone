@@ -11,14 +11,12 @@ PhonesIndexView = Backbone.View.extend({
 
 		this.render();
 
-
-        new PhonesIndexListView({
-            el: this.$('ul.phones'),
-            collection: this.collection
-        });
-    },
-
-    render: function () {
-        this.$el.html(JST['phones/index']());
-    }
+    new PhonesIndexListView({
+      el: this.$('ul.phones'),
+      collection: this.collection
+    });
+	},
+	render: function () {
+    this.$el.html(JST['phones/index']());
+	}.
 });
