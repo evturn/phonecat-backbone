@@ -2,7 +2,7 @@ window.JST = {};
 window.JST["phones/filter"] = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+='Search:\n<ul class=\'phones\'></ul>';
+__p+='Search: \n<input class=\'query\'>';
 }
 return __p;
 };
